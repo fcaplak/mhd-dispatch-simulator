@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+      <ProgressIndicator progress="0.0" />
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button layoutX="238.0" layoutY="172.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="164.0" text="Button" />
+            <RadioButton layoutX="59.0" layoutY="229.0" mnemonicParsing="false" text="RadioButton" />
+            <ProgressBar layoutX="59.0" layoutY="282.0" prefHeight="18.0" prefWidth="550.0" progress="0.0" />
+         </children>
+    </AnchorPane>
+      <Pane prefHeight="200.0" prefWidth="200.0" />
+  </children>
+</VBox>

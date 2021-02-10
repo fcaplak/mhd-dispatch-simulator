@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PrihlasenyVodicController">
+   <children>
+      <Button fx:id="btnLogout" layoutX="778.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleBtnLogout" prefHeight="16.0" prefWidth="77.0" text="Odhlásiť sa" />
+      <Button layoutX="510.0" layoutY="253.0" mnemonicParsing="false" onAction="#handleBtnPrejdi" prefHeight="47.0" prefWidth="118.0" text="Prejdi zastávku">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#ffffff00" height="40.0" layoutX="287.0" layoutY="149.0" stroke="#008609" strokeType="INSIDE" strokeWidth="3.0" width="40.0" />
+      <Text fx:id="txtCisloLinky" fill="#579000" layoutX="287.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" textAlignment="CENTER" wrappingWidth="40.0">
+         <font>
+            <Font name="Consolas Bold" size="22.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtKonecna" fill="#178d00" layoutX="337.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEXT_KONECNA" wrappingWidth="351.5712890625">
+         <font>
+            <Font name="Consolas" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="216.0" layoutY="271.0" stroke="#bcbcbc" strokeType="OUTSIDE" strokeWidth="0.0" text="►" wrappingWidth="29.17236328125">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtNextZas" fill="#6f6f6f" layoutX="254.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DALSICH5" wrappingWidth="184.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtCurrZas" layoutX="254.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEXT_AKTUALNA" wrappingWidth="236.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtVodic" layoutX="107.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEXT_VODIC" wrappingWidth="588.13671875">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Line endX="344.0" layoutX="341.0" layoutY="201.0" startX="-100.0" />
+      <Text fx:id="txtPeniaze" layoutX="185.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEXT_PENIAZE" wrappingWidth="184.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtVodic11" layoutX="107.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peniaze €" wrappingWidth="77.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtPriestupok" fill="RED" layoutX="510.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="190.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>595</y>
+      <w>200</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>connections::Linka
+--
+#cislo: int
+#typVozidiel: int
+--
++getCislo(): int
++getTypVozidiel(): int
++getTyp(): String
++getZasZac(): String
++addZastavka(Zastavka z): void
++getZastavky(): ArrayList&lt;Zastavka&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1035</x>
+      <y>605</y>
+      <w>100</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>connections::Zastavka
+--
+#meno: String
+--
++getMeno(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5050</x>
+      <y>590</y>
+      <w>160</w>
+      <h>115</h>
+    </coordinates>
+    <panel_attributes>manager::Priestupok
+--
+#vodic: Vodic
+#typPriestupku: int
+#vyska: int
+--
++Priestupok(Vodic vodic, int typPriestupku): ctor
++getTypPriestupku(): int
++getIdVodica(): int
++getDruh(): String
++getVyska(): int
++setTypPriestupku(int typPriestupku): void
++getVodic(): Vodic
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>145</x>
+      <y>440</y>
+      <w>160</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>/vehicles::Vozidlo/
+--
+#id: int
+#konecnaZastavka: Zastavka
+#aktualnaZastavka: Zastavka
+#zastavky: ArrayList&lt;Zastavka&gt;
+#vodic: Vodic
+#linka: Linka
+~cestujuci: Cestujuci
+--
++skontrolujPohanac(): void
++getZastavky(): ArrayList&lt;Zastavka&gt;
++setKonecnaZastavka(Zastavka): void
++getKonecnaZastavka(): Zastavka
++getTyp(): String
++getId(): int
++getVodic(): Vodic
++removeVodic(): void
++getLinka(): Linka
++getLoc(): String
++setLinka(Linka l): void
++setVodic(Vodic v): void
++getCestujuci(): Cestujuci
++removeLinka(): void
++obratSmer(): void
++getAktualnaZastavka(): Zastavka
++setAktualnaZastavka(Zastavka zastavka): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>695</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>vehicles::Autobus
+--
+#prebehlaKontrolaPaliva: boolean
+--
++kontrolaPaliva(): void
++skontrolujPohanac(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>325</x>
+      <y>695</y>
+      <w>155</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>vehicles::Elektricka
+--
+#prebehlaKontrolaPantografu: boolean
+--
++kontrolaPantografu(): void
++skontrolujPohanac(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>695</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>vehicles::Trolejbus
+--
+#prebehlaKontrolaZberacov: boolean
+--
++kontrolaZberacov(): void
++skontrolujPohanac(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>255</x>
+      <y>655</y>
+      <w>155</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;290.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>655</y>
+      <w>15</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>65</x>
+      <y>655</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>260.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>945</x>
+      <y>640</y>
+      <w>100</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>465</x>
+      <y>250</y>
+      <w>170</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>people::Vodic
+--
+#vozidlo: Vozidlo
+#linka: Linka
+#maximalneMeskanie: int
+#platZaJazdu: double
+#celkovyZarobok: double
+#odratajZaMeskanie: int
+#odratajZaRychlost: int
+#sancaNaPriestupok: int
+~aktivnyPriestupok: boolean
+--
++dostanVyplatenuJazdu(): void
++skratPrestavku(): void
++pokutaZaMeskanie(): void
++pokutaZaRychlost(): void
++getPokutaMeskanie(): int
++getPokutaRychlost(): int
++getCelkovyZarobok(): double
++setCelkovyZarobok(double): void
++getVozidlo(): Vozidlo
++getVozidloTab(): String
++setVozidlo(Vozidlo): void
++removeVozidlo(): void
++getLinka(): Linka
++getLinkaNum(): String
++setLinka(Linka linka): void
++getAktivnyPriestupok(): boolean
++removeAktivnyPriestupok(): void
++posun(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>95</y>
+      <w>90</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>/people::Zamestnanec/
+--
+-kod: int
+-id: int
+#dobaPrestavky: int
+--
++Zamestnanec(int id): ctor
++getId(): int
++skratPrestavku(): void
++getDobaPrestavky(): int
++getKod(): int
++getTyp(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>765</x>
+      <y>0</y>
+      <w>65</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>people::Clovek
+--
+#meno: String
+#vek: int
+--
++Clovek(): ctor
++getMeno(): String
++getVek(): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>825</x>
+      <y>105</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>people::Cestujuci
+--
+#druhVozidla: String
+--
++setDruhVozidla(String druhVozidla): void
++nastupDoVozidla(Vozidlo v): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>275</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>people::Dispecer
+--
++presun(int, int, int): void
++skratPrestavky(): void
++skratPrestavku(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>360</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>people::KontrolnyDispecer
+--
++KontrolnyDispecer(int id): ctor
++pokuta(int idVodic): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>520</y>
+      <w>105</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>people::ProfesionalnyVodic
+--
++ProfesionalnyVodic(int id): ctor
++skratPrestavku(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>585</x>
+      <y>520</y>
+      <w>95</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>people::SkusobnyVodic
+--
++SkusobnyVodic(int id): ctor
++skratPrestavku(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>695</x>
+      <y>65</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>795</x>
+      <y>65</y>
+      <w>95</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>545</x>
+      <y>195</y>
+      <w>160</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>300.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>195</y>
+      <w>65</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>475</x>
+      <y>485</y>
+      <w>70</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>485</y>
+      <w>90</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>320</y>
+      <w>25</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>995</x>
+      <y>40</y>
+      <w>140</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>manager::ContextNastup
+--
+-strategy: Strategy
+--
++spustiNastupStrategy(Cestujuci): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1195</x>
+      <y>60</y>
+      <w>160</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+manager::Strategy
+--
+--
++nastupDoVozidla(Cestujuci cestujuci): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1025</x>
+      <y>185</y>
+      <w>160</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>manager::NastupAutobus
+--
++nastupDoVozidla(Cestujuci): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1385</x>
+      <y>185</y>
+      <w>160</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>manager::NastupElektricka
+--
++nastupDoVozidla(Cestujuci): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>185</y>
+      <w>160</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>manager::NastupTrolejbus
+--
++nastupDoVozidla(Cestujuci): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1270</x>
+      <y>100</y>
+      <w>45</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>100</y>
+      <w>150</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>280.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1310</x>
+      <y>100</y>
+      <w>160</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;300.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1130</x>
+      <y>60</y>
+      <w>75</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+uses</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>920</x>
+      <y>75</y>
+      <w>85</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+asks</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+</diagram>
